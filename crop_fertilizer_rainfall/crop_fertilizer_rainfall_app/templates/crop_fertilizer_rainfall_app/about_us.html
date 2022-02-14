@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- <link rel="stylesheet" href="/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/style.css"> -->
+
+    <!-- font-awesome cdn -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="about_us_section_full">
+
+        <!-- header navbar starts -->
+        <header>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo-div">
+                        <a href="">
+                            <img src="{% static 'crop_fertilizer_rainfall_app/images/crop_and_rain.jpg' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                        <div class="predict_system col-md-12 col-sm-12">
+                            <!-- <h2>Crop <span>&</span> Rainfall <span>Predictor</span></h2> -->
+                            <h2>Crop <span>Fertilizer</span> Rainfall </h2>
+                        </div>
+
+                        <!-- Only for small device -->
+                        <div class="sm_dropdown_nav col-md-12 col-sm-12">
+                            <li class="sm_dropbtn_nav">
+                                <i class="fas fa-bars" id="sidebar_btn"></i>
+                            </li>
+                            <div class="sm_dropdown_content">
+                                <a href="/crop_fertilizer_rainfall_predict/home">Home</a>
+                                <a href="/crop_fertilizer_rainfall_predict/about_us">About</a>
+                                <!-- <a href="#contact">Contact</a>
+                                <div class="dropdown_sub_nav">
+                                    <li class="dropbtn_sub_nav">Predict
+                                    <i class="fa fa-caret-down"></i>
+                                    </li>
+                                    <div class="dropdown_content_sub_nav">
+                                    <a href="#banner-section">Crop</a>
+                                    <a href="#fertilizer_section">Fertilizer</a>
+                                    <a href="#rainfall_section">RainFall</a>
+                                    </div>
+                                </div>  -->
+                            </div>
+                        </div> 
+                        <!-- Only for small device --> 
+                </div>
+
+                <div class="navbar_lg col-lg-6">
+                    <nav>
+                        <ul>
+                            <li><a href="/crop_fertilizer_rainfall_predict/home/">Home</a></li>
+                            <li><a href="/crop_fertilizer_rainfall_predict/about_us">About</a></li>
+                            <!-- <li><a href="#contact">Contact</a></li> -->
+                            <!-- <div class="dropdown">
+                                <li class="dropbtn">Predict
+                                  <i class="fa fa-caret-down"></i>
+                                </li>
+                                <div class="dropdown-content">
+                                    <a href="#banner-section">Crop</a>
+                                    <a href="#fertilizer_section">Fertilizer</a>
+                                    <a href="#rainfall_section">RainFall</a>
+                                </div>
+                            </div>  -->
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- header navbar ends -->
+
+        <!-- About Us Banner section start -->
+        <section id="about_us_section">
+            <div class="about_us_banner">
+                <div class="about_us_banner_container">
+                    <div class="row">
+                        <div class="about_us_banner_image col-lg-6 col-md-6 col-sm-4">
+                            
+                        </div>
+                        <div class="about_us_banner_text col-lg-6 col-md-6 col-sm-8">
+                            <h1>About Us</h1>
+                            <p>Crop, Fertilizer and RainFall system predict Crop Recomendation (which crop is sutable for soil), 
+                                Fertilizer(which fertilizer is best for specific crops) and 
+                                RainFall (Tomorrow is going to be a rainy day or sunny day).
+                            </p>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </section>    
+        <!-- About Us Banner section End -->
+
+        <!-- about body start -->
+        <div class="about_body">
+            <div class="row">
+                <div class="about_us_info col-lg-4 col-md-6 col-sm-12">
+                    <a class="about_btn" href="#about_us_section">About Us</a>
+                </div>
+                <div class="system_advantages col-lg-4 col-md-6 col-sm-12">
+                    <a class="system_advantages_btn" href="#system_advantage_section">System Advantages</a>
+                </div>
+                <div class="features col-lg-4 col-md-12 col-sm-12">
+                    <a class="features_btn" href="#feature_section">Features</a>
+                </div>
+            </div>
+        </div>
+        <!-- about body end -->
+
+        <!-- System advantage start -->
+        <section id="system_advantage_section">
+            <div class="system_advantage_des col-lg-12 col-md-12 col-sm-12" >
+                <h1 class="">System Advantages</h1> 
+                <hr class="system_advantages_hr">
+                <p>
+                    This system recommend the most suitable Crop, Fertilizer and detect tomorrows RainFall to helps farmers.
+                    Using this system farmers can same their time to decide which crop will be sutable for each soil and which
+                    fertiliser will be best for each crop. It bridges the gap between farmers and technology. 
+                    This system is very easy to use.
+                </p>
+            </div>
+        </section>    
+        <!-- System advantage end -->
+
+
+        <!-- features start -->
+        <section id="">
+            <div class="feature col-lg-12 col-md-12 col-sm-12">
+                <div class="features_des_container" id="feature_section">
+                    <h1 class="">Features</h1>
+                    <div class="row">
+                        <div class="left_feature col-lg-4 col-md-4 col-sm-12">
+                            <!-- <img src="/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/crop_reco.png"> -->
+                            <img src="{% static 'crop_fertilizer_rainfall_app/images/crop_reco.png' %}" alt="">
+                        </div>
+                        <div class="mid_feature col-lg-4 col-md-4 col-sm-12">
+                            <!-- <img src="/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/fertilizer_predict.png"> -->
+                            <img src="{% static 'crop_fertilizer_rainfall_app/images/fertilizer_predict.png' %}" alt="">
+                        </div>
+                        <div class="last_feature col-lg-4 col-md-4 col-sm-12">
+                            <!-- <img src="/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/rainfall_prediction.png"> -->
+                            <img src="{% static 'crop_fertilizer_rainfall_app/images/rainfall_prediction.png' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>    
+        <!-- features end -->
+
+
+
+        <!-- footer starts from here -->
+        <footer class="footer">
+            <div class="row">
+                <div class="footer_predict_system col-lg-5 col-md-12 col-sm-12">
+                    <!-- <h2>Crop <span>&</span> Rainfall <span>Predictor</span></h2> -->
+                    <h2>Crop <span>Fertilizer</span> Rainfall </h2>
+                </div>
+                <div class="col-lg-5 col-sm-12">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="/crop_fertilizer_rainfall_predict/home">Home</a></li>
+                            <li><a href="#about_us_section">About</a></li>
+                            <!-- <li><a href="#contact">Contact</a></li> -->
+                        </ul>
+                    </div>
+                    <div class="fotter-text">
+                        <p>&copy; Developed with Love by <span style="color:rgb(231, 112, 112)">Partha Paul</span></p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <button class="fotter-icon">
+                        <a href="#">
+                            <i class=" fas fa-arrow-up"></i>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </footer>
+        <!-- footer ends here -->        
+    </div>
+</body>
+</html>

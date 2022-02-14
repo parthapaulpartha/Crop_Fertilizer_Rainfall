@@ -1,0 +1,3276 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body{ */
+    /* background-color: rgb(250, 250, 250); */
+    /* padding: 10px; */
+/* } */
+
+.row{
+    width: 100%;
+}
+
+.row::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+[class*= "col-"]{
+    float: left;
+    padding: 15px;
+}
+
+[class*= "col-"]{
+    width: 100%;
+}
+
+/* 
+Home page starts from header 
+ */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    Nav header start
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+header{
+    background-color: rgb(80, 95, 95);
+    /* padding: 0% 0%; */
+    text-align: center;
+}
+
+.logo-div img{
+    width: 100px;
+    height: 100px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+    padding: 2px;
+    /* float: left; */
+    margin-left: 15px;
+    transition: 1s;
+    transition-property: transform;
+}
+
+.logo-div img:hover{
+    transform: rotate(360deg);
+    border: 2px solid gray;
+}
+
+.predict_system{
+    /* float: left; */
+    text-align: center;
+    width: 100%;
+}
+
+.predict_system h2{
+    color: rgb(231, 112, 112);
+    font-size: 1.8rem;
+    margin-top: -10px;
+    margin-left: 10px;
+    margin-bottom: -10px;
+}
+
+.predict_system h2 span{
+    color: white;
+}
+
+nav ul li{
+    display: block;
+    
+}
+
+nav ul li a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    line-height: 60px;
+    padding: 0 10px;
+    
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-align: center;
+}
+
+nav ul li a:hover{
+    background-color: rgb(11, 46, 40);
+    border-radius: 10px;
+
+}
+
+/* navbar disply none for small device */
+.navbar_lg{
+    display: none;
+}
+/* navbar disply none for small device */
+
+
+/* only for small device*/
+.sm_dropdown_nav {
+    text-align: center;
+    overflow: hidden;
+    list-style: none;
+    /* width: 20%; */
+    margin-bottom: -15px;
+}
+  
+.sm_dropdown_nav .sm_dropbtn_nav #sidebar_btn{
+    display: block;
+    list-style: none;
+    border: none;
+    width: 100%;
+    /* height: 30px; */
+    font-size: 2rem;
+    border-radius: 10px;  
+    color: white;
+    cursor: pointer;
+    margin-top: -15px;
+    /* padding: 0 10px; */
+    /* margin-left: 50px; */
+    line-height: 60px;
+    background-color: rgb(80, 95, 95);
+    /* background-color: rgb(75, 14, 26); */
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.sm_dropdown_nav .sm_dropbtn_nav #sidebar_btn:hover {
+    background-color: rgb(11, 46, 40);
+    border-radius: 10px;
+}
+
+  
+.sm_dropdown_nav .sm_dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 87%;
+    text-align: center;
+    /* margin: 10px; */
+    /* width: 100%; */
+    border-radius: 10px;
+    background-color: rgb(107, 126, 126);
+    /* margin-left: -30px; */
+    /* margin-right: 60px; */
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+}
+  
+.sm_dropdown_nav .sm_dropdown_content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    /* margin-right: 50px; */
+}
+  
+.sm_dropdown_content a:hover {
+    background-color: rgb(11, 46, 40);
+}
+  
+.sm_dropdown_nav:hover .sm_dropdown_content {
+    display: block;
+}
+
+.dropdown_sub_nav {
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+}
+  
+.dropdown_sub_nav .dropbtn_sub_nav {
+    display: block;
+    border: none;
+    width: 100%;
+    margin-right: -40px;
+    font-size: 1.2rem;  
+    color: white;
+    padding: 0 10px;
+    border-radius: 10px;
+    line-height: 60px;
+    background-color: rgb(107, 126, 126);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.dropdown_sub_nav .dropbtn_sub_nav:hover {
+    background-color: rgb(11, 46, 40);
+    border-radius: 10px;
+}
+
+  
+.dropdown_content_sub_nav {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+    border-radius: 10px;
+    /* margin-right: 500px; */
+    background-color: rgb(107, 126, 126);
+    /* margin-left: 60px; */
+    /* margin-right: -20px; */
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+}
+  
+.dropdown_content_sub_nav a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    /* margin-right: 50px; */
+}
+  
+.dropdown_content_sub_nav a:hover {
+    background-color: rgb(11, 46, 40);
+}
+  
+.dropdown_sub_nav:hover .dropdown_content_sub_nav {
+    display: block;
+}
+
+/* only for small device end */
+
+.dropdown {
+    text-align: right;
+    overflow: hidden;
+}
+  
+.dropdown .dropbtn {
+    display: block;
+    border: none;
+    width: 100%;
+    font-size: 1rem;  
+    color: white;
+    padding: 0 10px;
+    line-height: 60px;
+    background-color: rgb(80, 95, 95);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.dropdown .dropbtn:hover {
+    background-color: rgb(11, 46, 40);
+    border-radius: 10px;
+}
+
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 93%;
+    border-radius: 10px;
+    background-color: rgb(107, 126, 126);
+    /* margin-left: -10px; */
+    /* margin-right: 20px; */
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+}
+  
+.dropdown-content a:hover {
+    background-color: rgb(11, 46, 40);
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    Nab header end
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* Crop section start */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Crop banner-section starts from here 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#banner-section{
+    /* for css image */
+    /* background-image: url("/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/crop_and_rain.jpg"); */
+    
+    /* for static image */
+    background-image: url("/static/crop_fertilizer_rainfall_app/images/crop_and_rain.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.banner-container{
+    padding: 100px 10px;
+    text-align: center;
+}
+
+.banner-container h1{
+    margin-top: 50px;
+    width: 100%;
+    /* color: rgb(240, 234, 235); */
+    /* margin: 20px auto; */
+    font-size: 1.2rem;
+    color: white;
+    background: rgb(119, 134, 120);
+    /* background: linear-gradient(-45deg, rgb(201, 201, 53) 10%, rgb(141, 80, 177) 50%,rgb(223, 152, 164) 90%); */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    /* font-family: 'Kaushan Script', cursive; */
+}
+
+.banner-container p{
+    width: 350px;
+    margin: 15px auto;
+    font-size: 1.6rem;
+    color: white;
+    background: rgb(52, 199, 118);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.banner-container .btn{
+    /* margin-top: 190px; */
+    width: 170px;
+    /* height: 60px; */
+    border: none; 
+    text-decoration: none;
+    padding: 15px;
+    margin: 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: rgb(174, 226, 210);
+    border: 4px solid turquoise;
+    color: rgb(44, 54, 58);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.4s;
+    /* transition-property: box-shadow; */
+}
+
+.banner-container .btn:hover{
+    /* transform: scale(1.1); */
+    box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+    /* border: 4px solid turquoise; */
+    color: rgb(5, 56, 41);
+ }
+
+.banner-container .btn_1{
+    width: 200px;
+    border: none; 
+    text-decoration: none;
+    padding: 15px;
+    margin: 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: rgb(174, 226, 210);
+    border: 4px solid turquoise;
+    color: rgb(44, 54, 58);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.4s;
+    /* transition-property: box-shadow; */
+}
+
+.banner-container .btn_1:hover{
+    /* transform: scale(1.1); */
+    box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+    /* border: 4px solid turquoise; */
+    color: rgb(5, 56, 41);
+ }
+
+.banner-container .banner_contact_icon{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.banner-container .banner_contact_icon .btn_con{
+    border: none;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    margin-right: 15px;
+    transition: 0.4s;
+    transition-property: transform box-shadow;
+}
+
+.banner-container .banner_contact_icon .btn_con:hover{
+    transform: scale(1.2);
+    box-shadow: 2px 5px 8px 5px black;
+    /* opacity: 0.8; */
+    /* transform: rotate(360deg); */
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> 
+ Crop banner-section end here 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */ 
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Crop_description_section starts 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#crop_description_id{
+    background-color: rgb(210, 224, 223);
+}
+
+.crop_description_container{
+    padding-top: 40px;
+    height: 500px;
+    margin: 0px 10px;
+    text-align: center;
+    /* overflow-y: scroll;   */
+    /* overflow-y: hidden; */
+}
+
+.crop_description_container hr{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    /* text-align: center; */
+}
+
+.crop_description_container h1{
+    font-size: 2rem;
+}
+
+.crop_description_container p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Crop_description_section end 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* -----------------------------------------
+ Crop Recommendation predict html page start
+ ----------------------------------------- */
+
+ .crop_recommendation_container{
+    text-align: center;
+    padding: 10px;
+    width: 700px;
+    margin: auto;
+    margin-top: 20px;
+    /* background-color: rgb(230, 224, 230); */
+}
+
+.crop_recommendation_container h2{
+    font-size: 2.1rem;
+    margin: 10px 0px;
+    width: 400px;
+    margin: auto;
+    color: rgb(12, 167, 167);
+    transition: 2s;
+    transition-property: border-style;
+}
+
+.crop_recommendation_container h2:hover{
+    width: 400px;
+    /* color: rgb(68, 64, 71); */
+    /* background: linear-gradient(-45deg, green, white , pink , black); */
+    border-style: dotted;
+    border-radius: 10px;
+}
+
+.crop_recommendation_container p{
+    font-size: 1.1rem;
+    margin: 5px 0px;
+    padding: 2px;
+}
+
+.crop_recommendation_container .hr{
+    text-align: center;
+    width: 250px;
+    margin: auto;
+    /* border: 0.1px solid teal; */
+}
+
+.crop_recommendation_form p{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.crop_recommendation_form input{
+    margin: 5px;
+    padding: 10px;
+    width: 300px;
+    height: 28px;
+    border: none;
+    border: 2px solid teal;
+    color: rgb(13, 59, 56);
+    border-radius: 5px;
+    margin-bottom: -10px;
+}
+
+.crop_recommendation_form ::placeholder{
+    text-align: center;
+}
+
+.crop_recommendation_form .p{
+    font-size: 1rem;
+}
+
+.crop_button .back_home button{
+    width: 130px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    padding: 5px;
+    /* float: left; */
+    border: none;
+    background-color: rgb(42, 145, 42);
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.4s;
+    transition-property: box-shadow, transform;
+    box-shadow: 2px 5px 8px 5px rgb(164, 184, 184);
+}
+
+.crop_button .back_home button a{
+    text-decoration: none;
+    color: white;
+    width: 130px;
+    height: 40px;
+}
+
+.crop_button .back_home button:hover{
+    box-shadow: 2px 6px 8px 3px rgb(42, 53, 53);
+    transform: scale(1.1);
+}
+
+.crop_button .back_home button span{
+    margin-right: 7px;
+    color: beige;
+    font-size: 17px;
+}
+
+.crop_button .predict_button input{
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    border: none;
+    background-color: teal;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.4s;
+    transition-property: box-shadow, transform;
+    box-shadow: 2px 5px 8px 5px rgb(164, 184, 184);
+}
+
+.crop_button .predict_button input:hover{
+    box-shadow: 2px 6px 8px 3px rgb(42, 53, 53);
+    transform: scale(1.1);
+}
+
+.crop_button .reset_button button{
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    border: none;
+    /* float: right; */
+    background-color: rgb(196, 43, 37);
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.4s;
+    transition-property: box-shadow, transform;
+    box-shadow: 2px 5px 8px 5px rgb(164, 184, 184);
+}
+
+.crop_button .reset_button button:hover{
+    box-shadow: 2px 6px 8px 3px rgb(42, 53, 53);
+    transform: scale(1.1);
+}
+
+.crop_button .reset_button span{
+    margin-right: 7px;
+    color: beige;
+    font-size: 17px;
+}
+
+.crop_result{
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    /* border-style: solid; */
+    border: 1px solid rgb(96, 165, 165);
+    background-color: rgb(243, 235, 235);
+    color: rgb(5, 114, 80);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.6rem;
+    margin-top: -5px;
+    transition: 0.4s;
+    transition-property: transform, background-color, color;
+}
+
+.crop_result:hover{
+    transform: scale(1.1);
+    background-color: rgb(26, 114, 126);
+    color: rgb(250, 252, 251);
+}
+
+.crop_result a i{
+    float: right;
+    color: rgb(25, 156, 126);
+    margin-left: 20px;
+    padding-left: 8px;
+    padding-right: 5px;
+    /* height: 400px; */
+    transition: 1s;
+    transition-property: transform;
+}
+
+.crop_result a i:hover{
+    transform: rotate(360deg);
+    color: white
+}
+
+.crop_to_fer_container{
+    width: 100%;
+    height: 250px;
+    text-align: center;
+    border: 2px teal solid;
+    border-radius: 10px;
+    /* background-color: rgb(184, 240, 240); */
+}
+
+.switch_fer_page{
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 30px;
+    color: rgb(11, 55, 58);
+    /* border-right: 1px rgb(26, 118, 134) solid; */
+    /* color:rgb(12, 167, 167); */
+}
+
+.right_des{
+    text-align: center;
+    /* margin-top: 50px; */
+}
+
+.right_des .right_btn{
+    text-align: center;
+    font-size: 1.3rem;
+    /* border: 2px teal solid; */
+    
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgb(17, 126, 126);
+    color: white;
+}
+
+.right_des .right_btn:hover{
+    border: 2px teal solid;
+    background-color: white;
+    color: rgb(13, 58, 58);
+}
+
+/* ---------------------------------------
+ Crop Recommendation predict html page end
+ -------------------------------------- */
+
+
+/* Crop Recommendation predict end */
+
+
+
+
+/* Fertilizer predict start from here */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Fertiliser_section start from here 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+    #fertilizer_section{
+        position: relative;
+        height: 600px;
+        text-align: center;
+    }
+
+    .fertilizer_section_container{
+        position: absolute;
+        /* for css image */
+        /* background-image: url("/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/fer_back.jpg"); */
+        
+        /* for static image */
+        background-image: url("/static/crop_fertilizer_rainfall_app/images/fer_back.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80px;
+        width: 100%;
+        /* border-top-left-radius: 250% 260px; */
+        /* border-top-right-radius: 10% 10px; */
+        border-bottom-left-radius: 70% 70px;
+        border-bottom-right-radius: 30% 0px;
+        padding-right: 2em;
+    }
+
+    .fertilizer_section_container_2{
+        position: absolute;
+        /* for css image */
+        /* background-image: url("/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/fer_back.jpg"); */
+        
+        /* for static image */
+        background-image: url("/static/crop_fertilizer_rainfall_app/images/fer_back.jpg");
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80px;
+        width: 100%;
+        margin-top: 520px;
+        border-top-left-radius: 70% 70px;
+        border-top-right-radius: 30% 0px;
+        /* border-bottom-left-radius: 70% 70px; */
+        /* border-bottom-right-radius: 30% 0px; */
+        padding-right: 2em;
+    }
+
+    .fer_des{
+        text-align: center;
+        margin-top: 220px;
+    }
+
+    .fer_des h2{
+        font-size: 2.5rem;
+        color: rgb(66, 66, 194);
+    }
+
+    .fer_des p{
+        margin: 20px;
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+    }
+
+    .fer_des .fer_btn{
+        margin: 10px;
+        width: 210px;
+        cursor: pointer;
+        padding: 15px;
+        font-size: 1.2rem;
+        /* border-radius: 10px; */
+        background-color: rgb(17, 66, 122);
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        transition: 0.5s;
+        transition-property: transform, box-shadow;
+    }
+
+    .fer_des .fer_btn:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+    }
+
+    .fer_des .fer_btn_1{
+        margin: 10px;
+        width: 160px;
+        cursor: pointer;
+        padding: 15px;
+        font-size: 1.2rem;
+        /* border-radius: 10px; */
+        background-color: rgb(17, 66, 122);
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        transition: 0.5s;
+        transition-property: transform, box-shadow;
+    }
+
+    .fer_des .fer_btn_1:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+    }
+
+    .fer_img{
+        margin-top: -280px;
+        /* margin-bottom: 700px; */
+    }
+
+    .fer_img img{
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-top: -180px;
+        margin-left: -5px;
+        cursor: pointer;
+        transition: 2s;
+        /* margin-bottom: 700px; */
+    }
+
+    .fer_img img:hover{
+        border: rgb(52, 158, 126) 2px solid;
+        transform: rotate(360deg);
+    }
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Fertiliser_section End here 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* -----------------------------------------
+ Fertilizer predict html page start
+ ----------------------------------------- */
+
+ .fertilizer_prediction_container{
+    text-align: center;
+    padding: 10px;
+    width: 700px;
+    margin: auto;
+    margin-top: 20px;
+    /* background-color: rgb(230, 224, 230); */
+}
+
+.fertilizer_prediction_container h2{
+    font-size: 2.1rem;
+    margin: 10px 0px;
+    width: 400px;
+    margin: auto;
+    color: rgb(12, 167, 167);
+    transition: 2s;
+    transition-property: border-style;
+}
+
+.fertilizer_prediction_container h2:hover{
+    width: 400px;
+    /* color: rgb(68, 64, 71); */
+    /* background: linear-gradient(-45deg, green, white , pink , black); */
+    border-style: dotted;
+    border-radius: 10px;
+}
+
+.fertilizer_prediction_container p{
+    font-size: 1.1rem;
+    margin: 5px 0px;
+    padding: 2px;
+}
+
+.fertilizer_prediction_container .hr{
+    text-align: center;
+    width: 250px;
+    margin: auto;
+    /* border: 0.1px solid teal; */
+}
+
+.fertilizer_prediction_form p{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.fertilizer_prediction_form input{
+    margin: 5px;
+    padding: 10px;
+    width: 300px;
+    height: 30px;
+    border: none;
+    border: 2px solid teal;
+    color: rgb(13, 59, 56);
+    border-radius: 5px;
+    margin-bottom: -10px;
+}
+
+.fertilizer_prediction_form select{
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
+    height: 30px;
+    border: none;
+    border: 2px solid teal;
+    color: rgb(13, 59, 56);
+    border-radius: 5px;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+
+.fertilizer_prediction_form select option{
+    color: rgb(13, 59, 56);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.fertilizer_prediction_form ::placeholder{
+    text-align: center;
+}
+
+.fertilizer_prediction_form .p{
+    font-size: 1rem;
+}
+
+.fertilizer_button .back_home button{
+    width: 130px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    padding: 5px;
+    /* float: left; */
+    border: none;
+    background-color: rgb(42, 145, 42);
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.4s;
+    transition-property: box-shadow, transform;
+    box-shadow: 2px 5px 8px 5px rgb(164, 184, 184);
+}
+
+.fertilizer_button .back_home button a{
+    text-decoration: none;
+    color: white;
+    width: 130px;
+    height: 40px;
+}
+
+.fertilizer_button .back_home button:hover{
+    box-shadow: 2px 6px 8px 3px rgb(42, 53, 53);
+    transform: scale(1.1);
+}
+
+.fertilizer_button .back_home button span{
+    margin-right: 7px;
+    color: beige;
+    font-size: 17px;
+}
+
+.fertilizer_button .predict_button input{
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    border: none;
+    background-color: teal;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.4s;
+    transition-property: box-shadow, transform;
+    box-shadow: 2px 5px 8px 5px rgb(164, 184, 184);
+}
+
+.fertilizer_button .predict_button input:hover{
+    box-shadow: 2px 6px 8px 3px rgb(42, 53, 53);
+    transform: scale(1.1);
+}
+
+.fertilizer_button .reset_button button{
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    border: none;
+    /* float: right; */
+    background-color: rgb(196, 43, 37);
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.4s;
+    transition-property: box-shadow, transform;
+    box-shadow: 2px 5px 8px 5px rgb(164, 184, 184);
+}
+
+.fertilizer_button .reset_button button:hover{
+    box-shadow: 2px 6px 8px 3px rgb(42, 53, 53);
+    transform: scale(1.1);
+}
+
+.fertilizer_button .reset_button span{
+    margin-right: 7px;
+    color: beige;
+    font-size: 17px;
+}
+
+.fertilizer_result{
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    /* border-style: solid; */
+    border: 1px solid rgb(96, 165, 165);
+    background-color: rgb(243, 235, 235);
+    color: rgb(5, 114, 80);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.6rem;
+    margin-top: -5px;
+    transition: 0.4s;
+    transition-property: transform, background-color, color;
+}
+
+.fertilizer_result:hover{
+    transform: scale(1.1);
+    background-color: rgb(26, 114, 126);
+    color: rgb(250, 252, 251);
+}
+
+.fertilizer_result a i{
+    float: right;
+    color: rgb(25, 156, 126);
+    margin-left: 20px;
+    padding-left: 8px;
+    padding-right: 5px;
+    /* height: 400px; */
+    transition: 1s;
+    transition-property: transform;
+}
+
+.fertilizer_result a i:hover{
+    transform: rotate(360deg);
+    color: white
+}
+
+/* ---------------------------------------
+ Fertilizer predict html page end
+ -------------------------------------- */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Fertiliser_description_section starts 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#fertilizer_description_id{
+    background-color: rgb(210, 224, 223);
+}
+    
+.fertilizer_description_container{
+    padding-top: 40px;
+    height: 500px;
+    margin: 0px 10px;
+    text-align: center;
+    /* overflow-y: scroll;   */
+    /* overflow-y: hidden; */
+}
+    
+.fertilizer_description_container hr{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    /* text-align: center; */
+}
+    
+.fertilizer_description_container h1{
+    font-size: 2rem;
+}
+    
+.fertilizer_description_container p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+    
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Fertiliser_description_section end 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* Fertilizer predict end */
+
+
+
+/* RainFall predict start from here */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Rainfall_section start from here 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  */
+
+#rainfall_section{
+    position: relative;
+    height: 600px;
+    text-align: center;
+}
+
+.rainfall_section_container{
+    position: absolute;
+    /* for css image */
+    /* background-image: url("/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/rain_back.jpg"); */
+    
+    /* for static image */
+    background-image: url("/static/crop_fertilizer_rainfall_app/images/rain_back.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 100%;
+    /* border-top-left-radius: 250% 260px; */
+    /* border-top-right-radius: 10% 10px; */
+    border-bottom-left-radius: 30% 0px;
+    border-bottom-right-radius: 70% 70px;
+    padding-right: 2em;
+}
+
+.rainfall_section_container_2{
+    position: absolute;
+    /* for css image */
+    /* background-image: url("/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/rain_back.jpg"); */
+    
+    /* for static image */
+    background-image: url("/static/crop_fertilizer_rainfall_app/images/rain_back.jpg");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80px;
+    width: 100%;
+    margin-top: 520px;
+    border-top-left-radius: 30% 0px;
+    border-top-right-radius: 70% 70px;
+    /* border-bottom-left-radius: 70% 70px; */
+    /* border-bottom-right-radius: 30% 0px; */
+    padding-right: 2em;
+}
+
+.rain_img{
+    margin-top: 80px;
+    margin-bottom: -70px;
+}
+
+.rain_img img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    /* margin-top: -180px; */
+    margin-left: 5px;
+    cursor: pointer;
+    transition: 2s;
+    /* margin-bottom: 700px; */
+}
+
+.rain_img img:hover{
+    border: rgb(52, 158, 126) 2px solid;
+    transform: rotate(360deg);
+}
+
+.rain_des{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.rain_des h2{
+    font-size: 2.5rem;
+    color: rgb(37, 172, 177);
+}
+
+.rain_des p{
+    margin: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+.rain_des .rain_btn{
+    margin: 10px;
+    width: 210px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 1.2rem;
+    /* border-radius: 10px; */
+    background-color: rgb(37, 172, 177);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.5s;
+    transition-property: transform, box-shadow;
+}
+
+.rain_des .rain_btn:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+}
+
+.rain_des .rain_btn_1{
+    margin: 10px;
+    width: 160px;
+    cursor: pointer;
+    padding: 15px;
+    font-size: 1.2rem;
+    /* border-radius: 10px; */
+    background-color: rgb(37, 172, 177);
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: 0.5s;
+    transition-property: transform, box-shadow;
+}
+
+.rain_des .rain_btn_1:hover{
+    transform: scale(1.1);
+    box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Rainfall_section End here 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Rainfall_description_section starts 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+#rainfall_description_id{
+    background-color: rgb(210, 224, 223);
+}
+
+.rainfall_description_container{
+    padding-top: 40px;
+    height: 500px;
+    margin: 0px 10px;
+    text-align: center;
+    /* overflow-y: scroll;   */
+    /* overflow-y: hidden; */
+}
+
+.rainfall_description_container hr{
+    margin-top: 10px;
+    margin-bottom: 15px;
+    /* text-align: center; */
+}
+
+.rainfall_description_container h1{
+    font-size: 2rem;
+}
+
+.rainfall_description_container p{
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Rainfall_description_section end 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* -----------------------------------------
+ RainFall predict html page start
+ ----------------------------------------- */
+
+ .rainfall_prediction_container{
+    text-align: center;
+    padding: 10px;
+    width: 700px;
+    margin: auto;
+    margin-top: 20px;
+    /* background-color: rgb(230, 224, 230); */
+}
+
+.rainfall_prediction_container h2{
+    font-size: 2.1rem;
+    margin: 10px 0px;
+    width: 400px;
+    margin: auto;
+    color: rgb(12, 167, 167);
+    transition: 2s;
+    transition-property: border-style;
+}
+
+.rainfall_prediction_container h2:hover{
+    width: 400px;
+    /* color: rgb(68, 64, 71); */
+    /* background: linear-gradient(-45deg, green, white , pink , black); */
+    border-style: dotted;
+    border-radius: 10px;
+}
+
+.rainfall_prediction_container p{
+    font-size: 1.1rem;
+    margin: 5px 0px;
+    padding: 2px;
+}
+
+.rainfall_prediction_container .hr{
+    text-align: center;
+    width: 250px;
+    margin: auto;
+    /* border: 0.1px solid teal; */
+}
+
+.rainfall_prediction_form p{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.rainfall_prediction_form input{
+    margin: 5px;
+    padding: 10px;
+    width: 300px;
+    height: 30px;
+    border: none;
+    border: 2px solid teal;
+    color: rgb(13, 59, 56);
+    border-radius: 5px;
+    margin-bottom: -10px;
+}
+
+.rainfall_prediction_form select{
+    margin: 5px;
+    padding: 5px;
+    width: 300px;
+    height: 30px;
+    border: none;
+    border: 2px solid teal;
+    color: rgb(13, 59, 56);
+    border-radius: 5px;
+    margin-bottom: -10px;
+    cursor: pointer;
+}
+
+.rainfall_prediction_form select option{
+    color: rgb(13, 59, 56);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.rainfall_prediction_form ::placeholder{
+    text-align: center;
+}
+
+.rainfall_prediction_form .p{
+    font-size: 1rem;
+}
+
+.rainfall_button .back_home button{
+    width: 130px;
+    height: 40px;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    padding: 5px;
+    /* float: left; */
+    border: none;
+    background-color: rgb(42, 145, 42);
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.4s;
+    transition-property: box-shadow, transform;
+    box-shadow: 2px 5px 8px 5px rgb(164, 184, 184);
+}
+
+.rainfall_button .back_home button a{
+    text-decoration: none;
+    color: white;
+    width: 130px;
+    height: 40px;
+}
+
+.rainfall_button .back_home button:hover{
+    box-shadow: 2px 6px 8px 3px rgb(42, 53, 53);
+    transform: scale(1.1);
+}
+
+.rainfall_button .back_home button span{
+    margin-right: 7px;
+    color: beige;
+    font-size: 17px;
+}
+
+.rainfall_button .predict_button input{
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    border: none;
+    background-color: teal;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.4s;
+    transition-property: box-shadow, transform;
+    box-shadow: 2px 5px 8px 5px rgb(164, 184, 184);
+}
+
+.rainfall_button .predict_button input:hover{
+    box-shadow: 2px 6px 8px 3px rgb(42, 53, 53);
+    transform: scale(1.1);
+}
+
+.rainfall_button .reset_button button{
+    width: 100px;
+    height: 40px;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    border: none;
+    /* float: right; */
+    background-color: rgb(196, 43, 37);
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.4s;
+    transition-property: box-shadow, transform;
+    box-shadow: 2px 5px 8px 5px rgb(164, 184, 184);
+}
+
+.rainfall_button .reset_button button:hover{
+    box-shadow: 2px 6px 8px 3px rgb(42, 53, 53);
+    transform: scale(1.1);
+}
+
+.rainfall_button .reset_button span{
+    margin-right: 7px;
+    color: beige;
+    font-size: 17px;
+}
+
+.rainfall_result{
+    text-align: center;
+    margin: auto;
+    width: 500px;
+    /* border-style: solid; */
+    border: 1px solid rgb(96, 165, 165);
+    background-color: rgb(243, 235, 235);
+    color: rgb(5, 114, 80);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.6rem;
+    margin-top: -5px;
+    transition: 0.4s;
+    transition-property: transform, background-color, color;
+}
+
+.rainfall_result:hover{
+    transform: scale(1.1);
+    background-color: rgb(26, 114, 126);
+    color: rgb(250, 252, 251);
+}
+
+.rainfall_result a i{
+    float: right;
+    color: rgb(25, 156, 126);
+    margin-left: 20px;
+    padding-left: 8px;
+    padding-right: 5px;
+    /* height: 400px; */
+    transition: 1s;
+    transition-property: transform;
+}
+
+.rainfall_result a i:hover{
+    transform: rotate(360deg);
+    color: white
+}
+
+/* ---------------------------------------
+ RainFall predict html page end
+ -------------------------------------- */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Rainy day html page start
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.rainy_day_container{
+    margin-top: 280px;
+    /* width: 800px;
+    margin-left: 20%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rainy_day_container h1{
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: bolder;
+    width: 400px;
+    margin: auto;
+    color: rgb(12, 167, 167);
+    transition: 2s;
+    transition-property: border-style;
+}
+
+.rainy_day_container h1:hover{
+    width: 400px;
+    /* color: rgb(68, 64, 71); */
+    /* background: linear-gradient(-45deg, green, white , pink , black); */
+    border-style: dotted;
+    border-radius: 10px;
+}
+
+.rainyimg img{
+    height: 350px;
+    width: 450px;
+    margin-left: 2px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.description h2{
+    font-size: 1.7rem;
+    margin-top: 20px;
+    text-align: center;
+    /* width: 650px; */
+}
+
+.description p{
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.description h2 span{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bolder;
+    color: rgb(219, 63, 128);
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Rainy day html page End
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* """""""""""""""""""""""""""""""
+ Sunny day html page start
+"""""""""""""""""""""""""""""""" */
+.sunny_day_container{
+    margin-top: 280px;
+    /* width: 800px;
+    margin-left: 20%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sunny_day_container h1{
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: bolder;
+    width: 400px;
+    margin: auto;
+    color: rgb(12, 167, 167);
+    transition: 2s;
+    transition-property: border-style;
+}
+
+.sunny_day_container h1:hover{
+    width: 400px;
+    /* color: rgb(68, 64, 71); */
+    /* background: linear-gradient(-45deg, green, white , pink , black); */
+    border-style: dotted;
+    border-radius: 10px;
+}
+
+.sunnyimg img{
+    height: 350px;
+    width: 450px;
+    margin-left: 2px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.description h2{
+    font-size: 1.7rem;
+    margin-top: 20px;
+    text-align: center;
+    /* width: 650px; */
+}
+
+.description p{
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.description h2 span{
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bolder;
+    color: rgb(219, 63, 128);
+}
+
+/* """""""""""""""""""""""""""""""
+ Sunny day html page End
+""""""""""""""""""""""""""""""" */
+
+/* RainFall predict end */
+
+
+/* 
+Home page ends here
+ */
+
+
+ /* about_us_section start */
+
+    /* about banner section start */
+    .about_us_banner{
+        /* for css image */
+        /* background-image: url("/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/about_back.jpg"); */
+        
+        /* for static image */
+        background-image: url("/static/crop_fertilizer_rainfall_app/images/about_back.jpg");
+        /* background-attachment: fixed; */
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+    }
+
+    .about_us_banner_container{
+        text-align: center ;
+        /* padding: 0px; */
+        /* margin-top: 10px; */
+        /* margin-left: -100px; */
+    }
+
+    /* .about_us_banner_image{ */
+        /* background-color: red; */
+        /* margin-left: -227px; */
+        /* color: white; */
+    /* } */
+
+    .about_us_banner_text{
+        background-color: rgb(21, 150, 133);
+        /* height: 500px; */
+        /* color: rgb(6, 64, 66); */
+        text-align: center;
+        margin-top: 100px;
+        border-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        /* padding: 0px 30px; */
+    }
+
+    .about_us_banner_text h1{
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .about_us_banner_text p{
+        font-size: 1.2rem;
+        margin: 10px 30px;
+        /* text-align: left; */
+        color: white;
+    }
+    /* about banner section end */
+
+    /* about body start */
+    .about_body{
+        height: 330px;
+        width: 100%;
+        background-color: #012c20;
+        padding: 20px;
+        border-bottom-left-radius: 50% 60px;
+        border-bottom-right-radius: 50% 60px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .about_us_info{
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    .about_btn {
+        margin: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 1.3rem;
+        /* border-radius: 10px; */
+        background-color: #367c2b;
+        color: white;
+        text-decoration: none;
+    }
+
+    .about_btn:hover{
+        background-color: #012c20;
+        border: white 2px solid;
+    }
+
+    .system_advantages{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .system_advantages_btn {
+        margin: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 1.3rem;
+        /* border-radius: 10px; */
+        background-color: #367c2b;
+        color: white;
+        text-decoration: none;
+    }
+
+    .system_advantages_btn:hover{
+        background-color: #012c20;
+        border: white 2px solid;
+    }
+
+    .features{
+        text-align: center;
+        margin-top: 20px;
+        /* height: 1000px; */
+    }
+
+    .features_btn {
+        margin: 5px;
+        cursor: pointer;
+        padding: 10px 20px;
+        font-size: 1.3rem;
+        /* border-radius: 10px; */
+        background-color: #367c2b;
+        color: white;
+        text-decoration: none;
+    }
+
+    .features_btn:hover{
+        background-color: #012c20;
+        border: white 2px solid;
+    }
+
+    
+    .left_feature img{
+        text-align: center;
+        width: 400px;
+        height: 300px;
+        transition: 2s;
+        border-radius: 10px;
+        border: rgb(5, 114, 80) 2px solid;
+        cursor: pointer;
+        transition-property: transform;
+    }
+
+    .left_feature img:hover{
+        transform: scale(1.1);
+    }
+
+    .mid_feature img{
+        text-align: center;
+        width: 400px;
+        height: 300px;
+        transition: 2s;
+        border-radius: 10px;
+        border: rgb(5, 114, 80) 2px solid;
+        cursor: pointer;
+        transition-property: transform;
+    }
+
+    .mid_feature img:hover{
+        transform: scale(1.1);
+    }
+
+    .last_feature img{
+        text-align: center;
+        width: 400px;
+        height: 300px;
+        transition: 2s;
+        border-radius: 10px;
+        border: rgb(5, 114, 80) 2px solid;
+        cursor: pointer;
+        transition-property: transform;
+    }
+
+    .last_feature img:hover{
+        transform: scale(1.1);
+    }
+
+    /* about body end */
+
+    /* System advantage start */
+    .system_advantage_des{
+        margin-top: 260px;
+        background-color: rgb(89, 99, 104);
+        height: 500px;
+        text-align: center;
+    }
+
+    .system_advantage_des h1{
+        margin-top: 130px;
+        color: white;
+        text-align: center;
+        font-size: 2.3rem;
+        /* margin-bottom: 30px; */
+        /* background-color: rgb(89, 99, 104); */
+    }
+
+    .system_advantages_hr{
+        margin-top: 10px;
+        border: 0.1px solid rgb(13, 15, 15);
+    }
+
+    .system_advantage_des p{
+        margin-top: 50px;
+        color: white;
+        text-align: justify;
+        font-size: 1.2rem;
+        width: 80%;
+        margin-left: 10%;
+        /* margin-bottom: 30px; */
+        background-color: rgb(89, 104, 119);
+    }
+
+    /* System advantage start */
+
+
+    /* features start */
+    .feature{
+        height: 1100px;
+        background-color: black;
+    }
+    .features_des_container{
+        margin: 20px;
+        /* background-color: black; */
+    }
+
+    .features_des_container h1{
+        color: white;
+        text-align: center;
+        font-size: 2.3rem;
+        /* margin-top: 20px; */
+    }
+    /* features end */
+/* 
+    #about-us::after{
+        content: '';
+        clear: both;
+        display: block;
+    } */
+/* about_us_section end */
+
+
+/* contact section starts */
+#contact{
+    /* margin-top: 20px; */
+    margin-bottom: -25px;
+    padding: 1%;
+    background-color: teal;
+}
+
+.contact-h2{
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.con_text{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.phone h3{
+    /* text-align: center; */
+    font-size: 1.4rem;
+    padding: 2px;
+    color: white;
+    padding: 5px;
+}
+
+.con_text p{
+    font-size: 1.2rem;
+    padding: 5px;
+    color: rgb(7, 25, 48);
+}
+
+.phone p i{
+    color: white;
+    padding: 5px 5px;
+}
+
+.email h3{
+    /* text-align: center; */
+    font-size: 1.4rem;
+    padding: 2px;
+    color: white;
+    margin-top: 25px;
+}
+
+.email p{
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.email p i{
+    /* font: 40px; */
+    color: white;
+    padding: 5px 10px;
+}
+
+.contact_details{
+    text-align: center;
+    color: white;
+    padding: 10px 0;
+}
+
+.send_messages{
+    text-align: center;
+    color: white;
+    margin: 5px;
+}
+
+.contact_details input, textarea{
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+}
+
+.contact_details textarea{
+    font-size: 20px;
+}
+
+.contact_details button{
+    border: none;
+    border-radius: 15px;
+    background-color: rgb(12, 66, 66);
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    margin: 10px;
+    width: 100px;
+
+    transition: 0.5s;
+    /* transition-timing-function: linear; */
+}
+
+.contact_details button:hover{
+    /* box-shadow: 3px 5px 8px 5px rgb(228, 46, 46); */
+    box-shadow: 3px 5px 8px 2px rgb(145, 37, 37);
+}
+
+.stay_connect{
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.stay_connect_text{
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: rgb(7, 25, 48);
+}
+
+.contact-icon{
+    margin-top: 25px;
+    text-align: center;
+}
+
+.contact-icon .btn{
+    border: none;
+    text-align: center;
+    border-radius: 15px;
+    font-size: 30px;
+    margin: 10px 15px;
+    margin-bottom: 30px;
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.contact-icon .btn:hover{
+    transform: scale(1.2);
+    box-shadow: 2px 5px 8px 5px black;
+    opacity: 0.8;
+    /* transform: rotate(360deg); */
+}
+
+/* contact section end */
+
+
+/* footer start from here */
+
+.footer{
+    text-align: center;
+    background-color: rgb(80, 95, 95);
+    color: white;
+}
+
+.footer_predict_system{
+    /* float: left; */
+    text-align: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+.footer_predict_system h2{
+    color: rgb(231, 112, 112);
+    font-size: 1.8rem;
+    margin-top: -10px;
+    margin-left: 10px;
+    margin-bottom: -10px;
+}
+
+.footer_predict_system h2 span{
+    color: white;
+}
+
+.fotter-text p{
+    font-size: 1rem;
+    margin-top: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+.footer-nav ul li{
+    display: inline;
+}
+
+.footer-nav ul li a{
+    display: inline;
+    text-decoration: none;
+    color: white;
+    margin: 0px 10px;
+    line-height: 35px;
+    font-size: 1.3rem;
+}
+
+.fotter-icon{
+    border: none;
+    padding: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: 0.4s;
+}
+
+.fotter-icon:hover{
+    transform: scale(1);
+    box-shadow: 2px 3px 3px 2px rgb(54, 51, 51);
+}
+/* footer end here */
+
+
+/* smaller device   576px and down*/
+@media (max-width: 576px) {
+
+    /* Crop Recommendation predict start */
+    .crop_recommendation_container{
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .crop_result{
+        width: 100%;
+        font-size: 23px;
+    }
+    /* Crop Recommendation predict End */ 
+
+
+    /* RainFall predict start */
+    .rainfall_prediction_container{
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .rainfall_result{
+        width: 100%;
+        font-size: 23px;
+    }
+    /* RainFall predict End */ 
+
+
+    /* RainFall predict start */
+    .fertilizer_prediction_container{
+        width: 100%;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .fertilizer_result{
+        width: 100%;
+        font-size: 23px;
+    }
+    /* RainFall predict End */     
+
+
+ 
+
+    .col-sm-1 {width: 8.33%;}
+    .col-sm-2 {width: 16.66%;}
+    .col-sm-3 {width: 25%;}
+    .col-sm-4 {width: 33.33%;}
+    .col-sm-5 {width: 41.66%;}
+    .col-sm-6 {width: 50%;}
+    .col-sm-7 {width: 58.33%;}
+    .col-sm-8 {width: 66.66%;}
+    .col-sm-9 {width: 75%;}
+    .col-sm-10 {width: 83.33%;}
+    .col-sm-11 {width: 91.66%;}
+    .col-sm-12 {width: 100%;}
+  }
+
+
+/* medium device   768px and up*/
+@media (min-width: 668px) {
+
+    /* navbar */
+    .sm_dropdown_nav .sm_dropdown_content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 93%;
+        text-align: center;
+        /* margin: 10px; */
+        /* width: 100%; */
+        border-radius: 10px;
+        background-color: rgb(107, 126, 126);
+        /* margin-left: -30px; */
+        /* margin-right: 60px; */
+        /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+        z-index: 1;
+    }
+    /* navbar */
+
+    /* crop html page */
+    .crop_to_fer_container{
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        border: 2px teal solid;
+        border-radius: 10px;
+        /* background-color: rgb(184, 240, 240); */
+    }
+    
+    .switch_fer_page{
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 30px;
+        color: rgb(11, 55, 58);
+        border-right: 1px rgb(26, 118, 134) solid;
+        /* color:rgb(12, 167, 167); */
+    }
+    
+    .right_des{
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .right_des .right_btn{
+        text-align: center;
+        font-size: 1.3rem;
+        /* border: 2px teal solid; */
+        
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(17, 126, 126);
+        color: white;
+    }
+    
+    .right_des .right_btn:hover{
+        border: 2px teal solid;
+        background-color: white;
+        color: rgb(13, 58, 58);
+    }
+    /* crop html page end */
+
+
+    /* -------------------------------
+    RainFall predict start
+    --------------------------------- */
+    .rainfall_prediction_form input{
+        width: 200px;
+    }
+
+    .rainfall_prediction_form select{
+        width: 200px;
+    }
+
+    .rainfall_prediction_container{
+        width: 800px;
+    }
+    /* -------------------------------
+    RainFall predict End
+    --------------------------------- */
+
+    .col-md-1 {width: 8.33%;}
+    .col-md-2 {width: 16.66%;}
+    .col-md-3 {width: 25%;}
+    .col-md-4 {width: 33.33%;}
+    .col-md-5 {width: 41.66%;}
+    .col-md-6 {width: 50%;}
+    .col-md-7 {width: 58.33%;}
+    .col-md-8 {width: 66.66%;}
+    .col-md-9 {width: 75%;}
+    .col-md-10 {width: 83.33%;}
+    .col-md-11 {width: 91.66%;}
+    .col-md-12 {width: 100%;}
+  } 
+
+/* large device   992px and up*/
+@media (min-width: 992px) {
+
+    /* -------------------------------
+    Nav bar stsrt
+    --------------------------------- */
+    header{
+        background-color: rgb(80, 95, 95);
+        /* backdrop-filter: blur(5px); */
+        max-height: 100px;
+    }
+
+    .predict_system{
+        /* float: left; */
+        text-align: center;
+        margin-top: -10px;
+    }
+
+    .logo-div{
+        text-align: left;
+        margin-left: 50px;
+    }
+
+    .logo-div img{
+        width: 70px;
+        height: 70px;
+    }
+    .predict_system h2{
+        margin-top: 15px;
+        /* margin-left: -10px; */
+    }
+
+    nav ul{
+        text-align: right;
+        margin-right: 30px;
+    }
+
+    nav ul li{
+        display: inline-block;
+        margin: 0px 10px;
+    }
+
+    nav ul li a{
+        display: inline-block;
+        margin-top: 5px;
+        font-size: 17px;
+        transition: 0.2s;
+        transition-property: transform box-shadow;
+    }
+
+    nav ul li a:hover{
+        /* background: transparent; */
+        transform: scale(1.1);
+        background-color: rgb(56, 77, 73);
+        border-radius: 5px;
+        line-height: 50px;
+        box-shadow: 2px 3px 5px 3px rgb(148, 95, 95);
+        /* text-decoration: underline; */
+    }
+
+    .dropdown {
+    float: right;
+    overflow: hidden;
+    }
+    
+    .dropdown {
+        text-align: center;
+        overflow: hidden;
+    }
+      
+    .dropdown .dropbtn {
+    display: block;
+    border: none;
+    width: 110px;
+    font-size: 17px;
+    margin-top: 5px;  
+    color: white;
+    padding: 0 10px;
+    line-height: 60px;
+    background-color: rgb(80, 95, 95);
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+
+    transition: 0.2s;
+    transition-property: transform box-shadow;
+    }
+    
+    .dropdown .dropbtn:hover {
+    /* background: transparent; */
+    transform: scale(1.1);
+    background-color: rgb(56, 77, 73);
+    border-radius: 5px;
+    line-height: 50px;
+    cursor: pointer;
+    box-shadow: 2px 3px 5px 3px rgb(148, 95, 95);
+    /* text-decoration: underline; */
+    }
+
+    .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 10%;
+    border-radius: 10px;
+    background-color: rgb(107, 126, 126);
+    /* margin-left: -10px; */
+    /* margin-right: 20px; */
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+    }
+      
+    .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    text-align: center;
+    /* margin-right: 200px;   */
+    }
+      
+    .dropdown-content a:hover {
+    background-color: rgb(11, 46, 40);
+    }
+      
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+
+    /* Only for small start */
+    .sm_dropdown_nav{
+        display: none;
+    }
+    /* Only for small end */
+    
+    .navbar_lg{
+        display: inline;
+    }
+    /* -------------------------------
+    Nav bar End
+    --------------------------------- */
+
+
+    /* -------------------------------
+    Crop Recommendation predict start
+    --------------------------------- */
+    .crop_recommendation_container h2{
+        width: 480px;
+    }
+    
+    .crop_recommendation_container h2:hover{
+        width: 480px;
+    }
+
+    .switch_fer_page{
+        text-align: left;
+        font-size: 1.2rem;
+        line-height: 30px;
+        color: rgb(11, 55, 58);
+        border-right: 1px rgb(26, 118, 134) solid;
+        /* color:rgb(12, 167, 167); */
+    }
+    
+    .right_des{
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    .right_des .right_btn{
+        text-align: center;
+        font-size: 1.3rem;
+        /* border: 2px teal solid; */
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgb(17, 126, 126);
+        color: white;
+    }
+    
+    .right_des .right_btn:hover{
+        border: 2px teal solid;
+        background-color: white;
+        color: rgb(13, 58, 58);
+    }
+    /* -------------------------------
+    Crop Recommendation predict End
+    --------------------------------- */
+
+    /* -------------------------------
+    RainFall predict start
+    --------------------------------- */
+    .rainfall_prediction_container{
+        width: 1100px;
+    }
+
+    .rainfall_prediction_form input{
+        width: 300px;
+    }
+
+    .rainfall_prediction_form select{
+        width: 300px;
+    }
+
+    .rainfall_prediction_container h2{
+        width: 480px;
+    }
+    
+    .rainfall_prediction_container h2:hover{
+        width: 480px;
+    }
+    /* -------------------------------
+    RainFall predict End
+    --------------------------------- */ 
+
+    /* -------------------------------
+    Fertilizer predict start
+    --------------------------------- */
+    .fertilizer_prediction_container{
+        width: 700px;
+    }
+
+    .fertilizer_prediction_form input{
+        width: 300px;
+    }
+
+    .fertilizer_prediction_form select{
+        width: 300px;
+    }
+
+    .fertilizer_prediction_container h2{
+        width: 480px;
+    }
+    
+    .fertilizer_prediction_container h2:hover{
+        width: 480px;
+    }
+    /* -------------------------------
+    Fertilizer predict End
+    --------------------------------- */
+    
+    /* banner section start */
+    #banner-section{
+        position: relative;
+        height: 530px;
+    }
+
+    .banner-container{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        /* text-align: center; */
+        /* margin-top: 30px; */
+    }
+
+    .banner-container h1{
+        padding: 20px 10px;
+        width: 700px;
+        text-align: justify;
+        font-size: 1.3rem;
+        margin-top: 50px;
+        box-shadow: 2px 3px 5px 3px rgb(41, 51, 45); 
+        /* text-align: left; */
+    }
+
+    .banner-container p{
+        /* padding: 20px 0px; */
+        width: 500px;
+        font-size: 2.4rem;
+    }
+
+    .banner-container .btn{
+        /* display: inline-block; */
+        /* padding: 20px 0px; */
+        /* margin-bottom: -30px; */
+        /* margin-top: 100px; */
+        width: 150px;
+        height: auto;
+        
+        font-size: 1rem;
+        border-radius: 10px;
+        background-color: rgb(174, 226, 210);
+        color: rgb(44, 54, 58);
+        transition: 0.2s;
+        transition-property: transform box-shadow,;
+    }
+
+    .banner-container .btn:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+        /* border: 4px solid turquoise; */
+        color: rgb(5, 56, 41);
+     }
+
+    .banner-container .btn_1{
+        /* display: inline-block; */
+        /* padding: 20px 0px; */
+        width: 210px;
+        font-size: 1rem;
+        border-radius: 10px;
+        background-color: rgb(174, 226, 210);
+        color: rgb(44, 54, 58);
+        transition: 0.4s;
+        transition-property: transform, box-shadow;
+    }
+
+    .banner-container .btn_1:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+        /* border: 4px solid turquoise; */
+        color: rgb(5, 56, 41);
+    }
+    
+    .banner-container .banner_contact_icon{
+        margin-top: 70px;
+        margin-bottom: -80px;
+        text-align: center;
+    }
+    
+    .banner-container .banner_contact_icon .btn_con{
+        border: none;
+        text-align: center;
+        border-radius: 15px;
+        font-size: 27px;
+        cursor: pointer;
+        padding: 5px;
+        margin-right: 20px;
+        transition: 0.4s;
+        transition-property: transform box-shadow;
+    }
+    
+    .banner-container .banner_contact_icon .btn_con:hover{
+        transform: scale(1.2);
+        box-shadow: 2px 5px 8px 5px black;
+        /* opacity: 0.8; */
+        /* transform: rotate(360deg); */
+    }
+    /* banner section end */
+
+    /* Crop_description_section starts */
+
+    .crop_description_container{
+        padding-top: 40px;
+        height: 300px;
+        margin: 0px 80px;
+        text-align: center;
+        overflow-y: hidden;
+    }
+
+    /* Crop_description_section end  */
+
+    /* Fertiliser_section start from here */
+    #fertilizer_section{
+        position: relative;
+        height: 550px;
+        text-align: center;
+    }
+
+    .fertilizer_section_container{
+        position: absolute;
+        /* for css image */
+        /* background-image: url("/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/fer_back.jpg"); */
+        
+        /* for static image */
+        background-image: url("/static/crop_fertilizer_rainfall_app/images/fer_back.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80px;
+        width: 100%;
+        /* border-top-left-radius: 250% 260px; */
+        /* border-top-right-radius: 10% 10px; */
+        border-bottom-left-radius: 70% 70px;
+        border-bottom-right-radius: 30% 0px;
+        padding-right: 2em;
+    }
+
+    .fertilizer_section_container_2{
+        position: absolute;
+        /* for css image */
+        /* background-image: url("/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/fer_back.jpg"); */
+        
+        /* for static image */
+        background-image: url("/static/crop_fertilizer_rainfall_app/images/fer_back.jpg");
+        background-position: top;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80px;
+        width: 100%;
+        margin-top: 470px;
+        border-top-left-radius: 70% 70px;
+        border-top-right-radius: 30% 0px;
+        /* border-bottom-left-radius: 70% 70px; */
+        /* border-bottom-right-radius: 30% 0px; */
+        padding-right: 2em;
+    }
+
+    .fer_des{
+        margin-top: 150px;
+    }
+
+    .fer_des h2{
+        font-size: 2.5rem;
+        color: rgb(66, 66, 194);
+    }
+
+    .fer_des p{
+        margin: 20px;
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+    }
+
+    .fer_des .fer_btn{
+        margin: 10px;
+        width: 210px;
+        cursor: pointer;
+        padding: 15px;
+        font-size: 1.3rem;
+        /* border-radius: 10px; */
+        background-color: rgb(17, 66, 122);
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        transition: 0.5s;
+        transition-property: transform, box-shadow;
+    }
+
+    .fer_des .fer_btn:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+    }
+
+    .fer_des .fer_btn_1{
+        margin: 10px;
+        width: 160px;
+        cursor: pointer;
+        padding: 15px;
+        font-size: 1.3rem;
+        /* border-radius: 10px; */
+        background-color: rgb(17, 66, 122);
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        transition: 0.5s;
+        transition-property: transform, box-shadow;
+    }
+
+    .fer_des .fer_btn_1:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+    }
+
+    .fer_img{
+        margin-top: 1px;
+        /* margin-bottom: 700px; */
+    }
+
+    .fer_img img{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin-top: 135px;
+        margin-left: 40px;
+        /* text-align: center; */
+        cursor: pointer;
+        transition: 2s;
+    }
+
+    .fer_img img:hover{
+        border: rgb(52, 158, 126) 2px solid;
+        transform: rotate(360deg);
+    }
+
+    .fer_img img::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+    /* Fertiliser_section End here */
+
+
+    /* Fertilizer_description_section starts  */
+
+    .fertilizer_description_container{
+        padding-top: 40px;
+        height: 300px;
+        margin: 0px 80px;
+        text-align: center;
+        overflow-y: hidden;
+    }
+
+    .fertilizer_section_container::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    /* Fertilizer_description_section end  */
+
+
+   /* Rainfall_section start from here */
+   #rainfall_section{
+        position: relative;
+        height: 550px;
+        text-align: center;
+    }
+
+    .rainfall_section_container{
+        position: absolute;
+        /* for css image */
+        /* background-image: url("/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/rain_back.jpg"); */
+        
+        /* for static image */
+        background-image: url("/static/crop_fertilizer_rainfall_app/images/rain_back.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80px;
+        width: 100%;
+        /* border-top-left-radius: 250% 260px; */
+        /* border-top-right-radius: 10% 10px; */
+        border-bottom-left-radius: 30% 0px;
+        border-bottom-right-radius: 70% 70px;
+        padding-right: 2em;
+    }
+
+    .rainfall_section_container_2{
+        position: absolute;
+        /* for css image */
+        /* background-image: url("/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/rain_back.jpg"); */
+        
+        /* for static image */
+        background-image: url("/static/crop_fertilizer_rainfall_app/images/rain_back.jpg");
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80px;
+        width: 100%;
+        margin-top: 470px;
+        border-top-left-radius: 30% 0px;
+        border-top-right-radius: 70% 70px;
+        /* border-bottom-left-radius: 70% 70px; */
+        /* border-bottom-right-radius: 30% 0px; */
+        padding-right: 2em;
+    }
+
+
+    .rain_img{
+        margin-top: 1px;
+        /* margin-bottom: 700px; */
+    }
+
+    .rain_img img{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin-top: 135px;
+        /* margin-left: 40px; */
+        /* text-align: center; */
+        /* opacity: 0.8; */
+        cursor: pointer;
+        transition: 2s;
+    }
+
+    .rain_img img:hover{
+        border: rgb(52, 158, 126) 2px solid;
+        transform: rotate(360deg);
+    }    
+
+    .rain_des{
+        margin-top: 150px;
+    }
+
+    .rain_des h2{
+        font-size: 2.5rem;
+        color: rgb(37, 172, 177);
+    }
+
+    .rain_des p{
+        margin: 20px;
+        font-size: 1.2rem;
+        margin-bottom: 50px;
+    }
+
+    .rain_des .rain_btn{
+        margin: 10px;
+        width: 210px;
+        cursor: pointer;
+        padding: 15px;
+        font-size: 1.3rem;
+        /* border-radius: 10px; */
+        background-color: rgb(37, 172, 177);
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        transition: 0.5s;
+        transition-property: transform, box-shadow;
+    }
+
+    .rain_des .rain_btn:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+    }
+
+    .rain_des .rain_btn_1{
+        margin: 10px;
+        width: 160px;
+        cursor: pointer;
+        padding: 15px;
+        font-size: 1.3rem;
+        /* border-radius: 10px; */
+        background-color: rgb(37, 172, 177);
+        color: white;
+        text-decoration: none;
+        border-radius: 20px;
+        transition: 0.5s;
+        transition-property: transform, box-shadow;
+    }
+
+    .rain_des .rain_btn_1:hover{
+        transform: scale(1.1);
+        box-shadow: 2px 3px 5px 3px rgb(185, 95, 95); 
+    }
+    /* Rainfall_section End here */
+
+
+    /* Fertilizer_description_section starts  */
+
+    .rainfall_description_container{
+        padding-top: 40px;
+        height: 300px;
+        margin: 0px 80px;
+        text-align: center;
+        overflow-y: hidden;
+    }
+
+    /* Rainfall_description_container end  */
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Rainy day html page start
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.rainy_day_container{
+    margin-top: 80px;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rainy_day_container h1{
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: bolder;
+    width: 400px;
+    margin: auto;
+    color: rgb(12, 167, 167);
+    transition: 2s;
+    transition-property: border-style;
+}
+
+.rainy_day_container h1:hover{
+    width: 400px;
+    /* color: rgb(68, 64, 71); */
+    /* background: linear-gradient(-45deg, green, white , pink , black); */
+    border-style: dotted;
+    border-radius: 10px;
+}
+
+.rainyimg img{
+    height: 350px;
+    width: 650px;
+    margin-left: 25%;
+    margin-top: 15px;
+    transition: 2s;
+    transition-property: transform;
+}
+
+.rainyimg img:hover{
+    transform: scale(1.1);
+}
+
+.description h2{
+    font-size: 1.7rem;
+    margin-top: 20px;
+    text-align: center;
+    /* width: 650px; */
+}
+
+.description p{
+    text-align: center;
+    font-size: 1.1rem;
+    width: 600px;
+    margin-left: 27%;
+}
+
+.description h2 span{
+    text-align: center;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bolder;
+    color: rgb(219, 63, 128);
+}
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+ Rainy day html page End
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+
+/* """""""""""""""""""""""""""""""
+ Sunny day html page start
+"""""""""""""""""""""""""""""""" */
+.sunny_day_container{
+    margin-top: 80px;
+    width: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sunny_day_container h1{
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: bolder;
+    width: 400px;
+    margin: auto;
+    color: rgb(12, 167, 167);
+    transition: 2s;
+    transition-property: border-style;
+}
+
+.sunny_day_container h1:hover{
+    width: 400px;
+    /* color: rgb(68, 64, 71); */
+    /* background: linear-gradient(-45deg, green, white , pink , black); */
+    border-style: dotted;
+    border-radius: 10px;
+}
+
+.sunnyimg img{
+    height: 350px;
+    width: 650px;
+    margin-left: 25%;
+    margin-top: 15px;
+    transition: 2s;
+    transition-property: transform;
+}
+
+.sunnyimg img:hover{
+    transform: scale(1.1);
+}
+
+.description h2{
+    font-size: 1.7rem;
+    margin-top: 20px;
+    text-align: center;
+    /* width: 650px; */
+}
+
+.description p{
+    text-align: center;
+    font-size: 1.1rem;
+    width: 600px;
+    margin-left: 27%;
+}
+
+.description h2 span{
+    text-align: center;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: bolder;
+    color: rgb(219, 63, 128);
+}
+
+/* """""""""""""""""""""""""""""""
+ Sunny day html page End
+""""""""""""""""""""""""""""""" */
+
+ /* about_us_section start */
+
+    /* about banner section start */
+    .about_us_banner{
+        /* for css image */
+        /* background-image: url("/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/about_back.jpg"); */
+        
+        /* for static image */
+        background-image: url("/static/crop_fertilizer_rainfall_app/images/about_back.jpg");
+        /* background-attachment: fixed; */
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+    }
+
+    .about_us_banner_container{
+        text-align: center ;
+        /* padding: 0px; */
+        /* margin-top: 10px; */
+        /* margin-left: -100px; */
+    }
+
+    .about_us_banner_image{
+        /* background-color: red; */
+        margin-left: -227px;
+        /* color: white; */
+    }
+
+    .about_us_banner_text{
+        background-color: rgb(21, 150, 133);
+        /* height: 500px; */
+        /* color: rgb(6, 64, 66); */
+        text-align: center;
+        margin-top: 180px;
+        border-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-top-left-radius: 20px;
+        /* padding: 0px 30px; */
+    }
+
+    .about_us_banner_text h1{
+        font-size: 2.5rem;
+        color: white;
+        margin-bottom: 20px;
+    }
+
+    .about_us_banner_text p{
+        font-size: 1.2rem;
+        margin: 10px 30px;
+        text-align: justify;
+        color: white;
+    }
+    /* about banner section end */
+
+    /* about body start */
+    .about_body{
+        height: 330px;
+        width: 100%;
+        background-color: #012c20;
+        padding: 20px;
+        border-bottom-left-radius: 50% 60px;
+        border-bottom-right-radius: 50% 60px;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .about_us_info{
+        text-align: right;
+        margin-top: 120px;
+    }
+
+    .about_btn {
+        margin: 10px;
+        cursor: pointer;
+        padding: 20px 40px;
+        font-size: 1.3rem;
+        /* border-radius: 10px; */
+        background-color: #367c2b;
+        color: white;
+        text-decoration: none;
+    }
+
+    .about_btn:hover{
+        background-color: #012c20;
+        border: white 2px solid;
+    }
+
+    .system_advantages{
+        text-align: center;
+        margin-top: 120px;
+    }
+
+    .system_advantages_btn {
+        margin: 10px;
+        cursor: pointer;
+        padding: 20px 40px;
+        font-size: 1.3rem;
+        /* border-radius: 10px; */
+        background-color: #367c2b;
+        color: white;
+        text-decoration: none;
+    }
+
+    .system_advantages_btn:hover{
+        background-color: #012c20;
+        border: white 2px solid;
+    }
+
+    .features{
+        text-align: left;
+        margin-top: 120px;
+    }
+
+    .features_btn {
+        margin: 10px;
+        cursor: pointer;
+        padding: 20px 40px;
+        font-size: 1.3rem;
+        /* border-radius: 10px; */
+        background-color: #367c2b;
+        color: white;
+        text-decoration: none;
+    }
+
+    .features_btn:hover{
+        background-color: #012c20;
+        border: white 2px solid;
+    }
+    /* about body end */
+
+    /* System advantage start */
+    .system_advantage_des{
+        margin-top: 260px;
+        background-color: rgb(89, 99, 104);
+        height: 500px;
+    }
+
+    .system_advantage_des h1{
+        margin-top: 130px;
+        color: white;
+        text-align: center;
+        font-size: 2.3rem;
+        /* margin-bottom: 30px; */
+        /* background-color: rgb(89, 99, 104); */
+    }
+
+    .system_advantages_hr{
+        margin-top: 10px;
+        width: 50%;
+        margin-left: 25%;
+        border: 0.1px solid rgb(13, 15, 15);
+    }
+
+    .system_advantage_des p{
+        margin-top: 50px;
+        color: white;
+        text-align: justify;
+        font-size: 1.2rem;
+        width: 50%;
+        margin-left: 25%;
+        /* margin-bottom: 30px; */
+        background-color: rgb(89, 104, 119);
+    }
+
+    /* System advantage start */
+
+
+    /* features start */
+    .feature{
+        height: 500px;
+        background-color: black;
+    }
+    .features_des_container{
+        margin: 20px;
+        /* background-color: black; */
+    }
+
+    .features_des_container h1{
+        color: white;
+        text-align: center;
+        font-size: 2.3rem;
+        /* margin-top: 20px; */
+    }
+
+    .left_feature img{
+        text-align: center;
+        width: 400px;
+        height: 350px;
+        transition: 2s;
+        border-radius: 10px;
+        border: rgb(5, 114, 80) 2px solid;
+        cursor: pointer;
+        transition-property: transform;
+    }
+
+    .left_feature img:hover{
+        transform: scale(1.1);
+    }
+
+    .mid_feature img{
+        text-align: center;
+        width: 400px;
+        height: 350px;
+        transition: 2s;
+        border-radius: 10px;
+        border: rgb(5, 114, 80) 2px solid;
+        cursor: pointer;
+        transition-property: transform;
+    }
+
+    .mid_feature img:hover{
+        transform: scale(1.1);
+    }
+
+    .last_feature img{
+        text-align: center;
+        width: 400px;
+        height: 350px;
+        transition: 2s;
+        border-radius: 10px;
+        border: rgb(5, 114, 80) 2px solid;
+        cursor: pointer;
+        transition-property: transform;
+    }
+
+    .last_feature img:hover{
+        transform: scale(1.1);
+    }
+
+    /* features end */
+/* 
+    #about-us::after{
+        content: '';
+        clear: both;
+        display: block;
+    } */
+/* about_us_section end */
+
+
+    /* footer section start here */
+    .footer-nav ul{
+        text-align: center;
+    }
+
+    .footer-nav ul li{
+        display: inline-block;
+        margin: 0px 15px;
+    }
+    /* footer section end here */
+
+
+    .col-lg-1 {width: 8.33%;}
+    .col-lg-2 {width: 16.66%;}
+    .col-lg-3 {width: 25%;}
+    .col-lg-4 {width: 33.33%;}
+    .col-lg-5 {width: 41.66%;}
+    .col-lg-6 {width: 50%;}
+    .col-lg-7 {width: 58.33%;}
+    .col-lg-8 {width: 66.66%;}
+    .col-lg-9 {width: 75%;}
+    .col-lg-10 {width: 83.33%;}
+    .col-lg-11 {width: 91.66%;}
+    .col-lg-12 {width: 100%;}
+  } 

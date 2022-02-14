@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Prediction</title>
+
+    
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- <link rel="stylesheet" href="/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/style.css"> -->
+
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="fertilizer_prediction_container">
+        <h2>Fertilizer Prediction</h2>
+        <p> Please fill in all information </p>
+        <hr class="hr">
+            <form action="/crop_fertilizer_rainfall_predict/fertilizer_prediction/result/" >
+                <div class="row">
+                    <div class="fertilizer_prediction_form">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <p> Temprature <span style="color:red">*</span></p>
+                            <input type="text" name="temp" placeholder="Temprature in Celsius" required>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <p> Humidity<span style="color:red">*</span></p>
+                            <input type="text" name="humidity"  required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="fertilizer_prediction_form">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <p> Moisture <span style="color:red">*</span></p>
+                            <input type="text" name="moisture"  required>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <p> Nitrogen <span style="color:red">*</span></p>
+                            <input type="text" name="nitrogen" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="fertilizer_prediction_form">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <p> Potassium <span style="color:red">*</span></p>
+                            <input type="text"  name="potassium" required>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <p> Phosphorous <span style="color:red">*</span></p>
+                            <input type="text" name="phosphorous"  required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="fertilizer_prediction_form">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <p> Soil Type <span style="color:red">*</span></p>
+                            <select class="soiltype" id="soiltype" name="soiltype" aria-label="Soil Type" required>
+                                <option selected>Select Soil Type</option>
+                                <option value= 0>Black</option>
+                                <option value= 1>Clayey</option>
+                                <option value= 2>Loamy</option>
+                                <option value= 3>Red</option>
+                                <option value= 4>Sandy</option>
+                                <option value= 5>sandy loam</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <p> Crop Type <span style="color:red">*</span></p>
+                            <select class="croptype" id="croptype" name = "croptype" aria-label="Crop Type" required>
+                                <option selected>Select Crop Type</option>
+                                <option value= 0>Rice</option>
+                                <option value= 1>Maize</option>
+                                <option value= 2>Coffee</option>
+                                <option value= 3>Sugarcane</option>
+                                <option value= 4>Cotton</option>
+                                <option value= 5>Millets</option>
+                                <option value= 6>Paddy</option>
+                                <option value= 7>Pulses</option>
+                                <option value= 8>Wheat</option>
+                                <option value= 9>Barley</option>
+                                <option value= 10>Tobacco</option>
+                                <option value= 11>Oil seeds</option>
+                                <option value= 12>Ground Nuts</option>
+                                <option value= 13>Banana</option>
+                                <option value= 14>Mango</option>
+                                <option value= 15>Apple</option>
+                                <option value= 16>Orange</option>
+                                <option value= 17>Coconut</option>
+                                <option value= 18>Jute</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="fertilizer_button">
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="back_home">
+                                <button><a href="/crop_fertilizer_rainfall_predict/home"><span><i class="fas fa-home"></i></span>Back Home</a></button>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="predict_button">
+                                <input type="submit" value="Predict">
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 col-md-4 col-sm-12">
+                            <div class="reset_button">
+                                <button type="reset"><span><i class="fas fa-undo-alt"></i></span>Reset</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><br>
+            </form><br>
+
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h4 class="fertilizer_result"> Fertilizer Prediction is: {{ fertilizer_predict_result }} <a href="/crop_fertilizer_rainfall_predict/fertilizer_prediction" ><i class="fas fa-redo"></i></a></h4>
+                </div>
+            </div>
+    </div>
+</body>
+</html>

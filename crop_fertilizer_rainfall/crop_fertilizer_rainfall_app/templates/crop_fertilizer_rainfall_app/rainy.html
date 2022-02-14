@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainy Day</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- <link rel="stylesheet" href="/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/style.css"> -->
+
+    <!-- Font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <section id="rainy_day_section">
+
+        <header>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo-div">
+                        <a href="">
+                            <img src="{% static 'crop_fertilizer_rainfall_app/images/crop_and_rain.jpg' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                        <div class="predict_system col-md-12 col-sm-12">
+                            <!-- <h2>Crop <span>&</span> Rainfall <span>Predictor</span></h2> -->
+                            <h2>Crop <span>Fertilizer</span> Rainfall </h2>
+                        </div>
+
+                        <!-- Only for small device -->
+                        <div class="sm_dropdown_nav col-md-12 col-sm-12">
+                            <li class="sm_dropbtn_nav">
+                                <i class="fas fa-bars" id="sidebar_btn"></i>
+                            </li>
+                            <div class="sm_dropdown_content">
+                                <a href="/crop_fertilizer_rainfall_predict/home/">Home</a>
+                                <!-- <a href="/crop_fertilizer_rainfall_predict/about_us">About</a>
+                                <a href="#contact">Contact</a> -->
+                                <div class="dropdown_sub_nav">
+                                    <li class="dropbtn_sub_nav">Predict
+                                    <i class="fa fa-caret-down"></i>
+                                    </li>
+                                    <div class="dropdown_content_sub_nav">
+                                        <a href="/crop_fertilizer_rainfall_predict/crop_recommendation">Crop</a>
+                                        <a href="/crop_fertilizer_rainfall_predict/fertilizer_prediction">Fertilizer</a>
+                                        <a href="/crop_fertilizer_rainfall_predict/rainfall_prediction">RainFall</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Only for small device -->
+                </div>
+
+                <div class="navbar_lg col-lg-6">
+                    <nav>
+                        <ul>
+                            <li><a href="/crop_fertilizer_rainfall_predict/home/">Home</a></li>
+<!--                            <li><a href="/crop_fertilizer_rainfall_predict/about_us">About</a></li>-->
+                            <!-- <li><a href="#contact">Contact</a></li> -->
+                            <div class="dropdown">
+                                <li class="dropbtn">Predict
+                                  <i class="fa fa-caret-down"></i>
+                                </li>
+                                <div class="dropdown-content">
+                                    <a href="/crop_fertilizer_rainfall_predict/crop_recommendation">Crop</a>
+                                    <a href="/crop_fertilizer_rainfall_predict/fertilizer_prediction">Fertilizer</a>
+                                    <a href="/crop_fertilizer_rainfall_predict/rainfall_prediction">RainFall</a>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- header navbar ends -->
+
+
+        <div class="rainy_day_container col-sm-12 col-md-12 col-lg-12">
+            <h1>RAINY DAY</h1>
+            <div class="rainyimg ">
+                <!-- <img src="/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/static/crop_rainfall_app/images/rain.jpg" alt="rainy image"> -->
+                <img src="{% static 'crop_fertilizer_rainfall_app/images/rain.jpg' %}" alt="rainy image">
+            </div>
+            <div class="description">
+                <h2>Tomorrow is going to be <span>Rainy Day</span></h2><br>
+                <p>
+                    Rain is usually seen as a benefit to crops and fields, but there is an “ideal” 
+                    amount of rainfall in any given growing season for most crops. If the average 
+                    rainfall is much lower or higher than the ideal, it can lead to significant problems,
+                    from drowned crops to lower yields. 
+                </p></br>
+            </div>
+        </div>
+    </section>    
+</body>
+</html>

@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop & Rainfall Predictor</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    <!-- <link rel="stylesheet" href="/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/style.css"> -->
+
+    <!-- font-awesome cdn -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="container">
+        <!-- header navbar starts -->
+        <header>
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo-div">
+                        <a href="">
+                            <img src="{% static 'crop_fertilizer_rainfall_app/images/crop_and_rain.jpg' %}" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4 ">
+                        <div class="predict_system col-md-12 col-sm-12">
+                            <!-- <h2>Crop <span>&</span> Rainfall <span>Predictor</span></h2> -->
+                            <h2>Crop <span>Fertilizer</span> Rainfall </h2>
+                        </div>
+
+                        <!-- Only for small device -->
+                        <div class="sm_dropdown_nav col-md-12 col-sm-12">
+                            <li class="sm_dropbtn_nav">
+                                <i class="fas fa-bars" id="sidebar_btn"></i>
+                            </li>
+                            <div class="sm_dropdown_content">
+                                <a href="#">Home</a>
+                                <a href="/crop_fertilizer_rainfall_predict/about_us">About</a>
+                                <a href="#contact">Contact</a>
+                                <div class="dropdown_sub_nav">
+                                    <li class="dropbtn_sub_nav">Predict
+                                    <i class="fa fa-caret-down"></i>
+                                    </li>
+                                    <div class="dropdown_content_sub_nav">
+                                    <a href="#banner-section">Crop</a>
+                                    <a href="#fertilizer_section">Fertilizer</a>
+                                    <a href="#rainfall_section">RainFall</a>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div> 
+                        <!-- Only for small device --> 
+                </div>
+
+                <div class="navbar_lg col-lg-6">
+                    <nav>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="/crop_fertilizer_rainfall_predict/about_us">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                            <div class="dropdown">
+                                <li class="dropbtn">Predict
+                                  <i class="fa fa-caret-down"></i>
+                                </li>
+                                <div class="dropdown-content">
+                                    <a href="#banner-section">Crop</a>
+                                    <a href="#fertilizer_section">Fertilizer</a>
+                                    <a href="#rainfall_section">RainFall</a>
+                                </div>
+                            </div> 
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- header navbar ends -->
+
+        <!-- banner-section starts -->
+        <section id="banner-section">
+            <div class="banner-container">
+                <h1>Crop any plant product grown, harvested or collected for human use. Over 80 crops are grown worldwide, 
+                    providing people with the major part of their food and supplying fibers,
+                     construction materials, pharmaceuticals, beverage, rubber, dyes and other materials.
+                </h1>   
+                
+                <a class="btn_1" href="/crop_fertilizer_rainfall_predict/crop_recommendation">Crop Recommendation</a>
+                <a class="btn" href="#crop_description_id"> Read More</a>    
+
+                <div class="banner_contact_icon">
+                    <div class="">
+                        <button class="btn_con" onclick="window.open('https://www.linkedin.com/')" class="request-callback">
+                            <i class="fab fa-linkedin" style="color: rgb(73, 151, 196);" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn_con" onclick="window.open('https://github.com/')" class="request-callback">
+                            <i class="fab fa-github" style="color: rgb(17, 16, 16);" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn_con" onclick="window.open('https://twitter.com/')" class="request-callback">
+                            <i class="fab fa-twitter" style="color: rgb(35, 123, 224);" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn_con">
+                            <a href="#crop_description_id">
+                            <i class="fas fa-arrow-down" style="color: rgb(58, 140, 187);" aria-hidden="true"></i>
+                            </a>
+                        </button>
+                    </div>    
+                </div>
+            </div>       
+        </section>
+        <!-- banner-section ends -->  
+        
+        <!-- Crop_description_section starts -->
+        <section id="crop_description_id">
+            <div class="crop_description_container">
+                <h1>Crop</h1>
+                <hr>
+                <p>Crop any plant product grown, harvested or collected for human use. Over 80 crops are grown worldwide, providing people with the major part of their food and supplying fibers, construction materials, pharmaceuticals, beverage, rubber, dyes and other materials. Crops grown for export are cash crops, while a cash crop is one grown in the interval between two main crops.
+
+                    Crops are usually recognized under four major groups. The food crops provide the bulk of people's food worldwide; the major types being cereals, tubers, roots, pulses, vegetables, oil crops, fruits, tree nuts, sugarcane, and spices. Cereals make the largest contribution to human nutrition. In Bangladesh the major cereals are rice and wheat; the minor cereals include barley/jab, joar, bazra, cheena and kaon; of the oil seeds, rape and mustard are most important.
+                    
+                    Forage crops are grown to feed livestock. 
+                    
+                    <a href="https://en.banglapedia.org/index.php/Crop"
+                     target="blank" style="font-size: 21px; text-decoration: none; color: red;">See More</a>
+                    
+                </p>
+            </div>        
+        </section>
+        <!-- Crop_description_section ends --> 
+        
+        <!-- Fertilizer_section start from here -->
+        <section id="fertilizer_section">
+            <div class="fertilizer_section_container">
+                <div class="fertilizer_section_container_2"></div>
+                    <div class="row">
+
+                        <div class="fer_des col-lg-6 col-md-6 col-sm-12">
+                            <h2>Fertilizer</h2>
+                            <p>Fertilizer organic or inorganic material of natural or synthetic origin
+                                (other than liming materials) that is added to a soil to supply one or
+                                more plant nutrients essential to the growth of plants.
+                            </p>
+
+                            <a class="fer_btn" href="/crop_fertilizer_rainfall_predict/fertilizer_prediction">Fertilizer Prediction</a>
+                            <a class="fer_btn_1" href="#fertilizer_description_id"> Read More</a>
+                        </div>
+
+                        <div class="fer_img col-lg-6 col-md-6 col-sm-12">
+                            {% load static %}
+                            <img src="{% static 'crop_fertilizer_rainfall_app/images/fer_font.jpg' %}" alt="House image">
+                            <!-- <img src="/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/fer_font.jpg" alt="fertilizer image"> -->
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!-- Fertilizer_section end here -->
+
+        <!-- Fertilizer_description_section starts -->
+        <section id="fertilizer_description_id">
+            <div class="fertilizer_description_container">
+                <h1>Fertilizer</h1>
+                <hr>
+                <p>Fertilizer organic or inorganic material of natural or synthetic origin (other than liming materials) 
+                    that is added to a soil to supply one or more plant nutrients essential to the growth of plants. 
+                    Any inorganic salt such as ammonium sulphate, or an organic substance, such as urea, used to promote
+                    crop production by supplying plant nutrients is considered to be a 'commercial' fertiliser. Specifically
+                    there are three different kinds of fertilizers: (i) chemical fertilisers, (ii) organic fertilisers, and
+                    (iii) biofertilisers. Fertilizers are the most important agricultural input throughout the world.
+                    Synthetic fertilizers contain nutrients in concentrated form. Naturally occurring inorganic materials
+                    are also rich in nutrients. Consequently, relatively lower amounts of fertilisers are needed to meet 
+                    the crop requirement compared to naturally occurring organic materials
+                    <a href="https://en.banglapedia.org/index.php/Fertiliser"
+                     target="blank" style="font-size: 21px; text-decoration: none; color: red;">See More</a>
+                    
+                </p>
+            </div>        
+        </section>
+        <!-- Fertilizer_description_section ends --> 
+
+
+        <!-- Rainfall_section start from here -->
+        <section id="rainfall_section">
+            <div class="rainfall_section_container">
+                <div class="rainfall_section_container_2"></div>
+                    <div class="row">
+
+                        <div class="rain_img col-lg-6 col-md-6 col-sm-12">
+                            {% load static %}
+                            <img src="{% static 'crop_fertilizer_rainfall_app/images/rain_font.jpg' %}" alt="House image">
+                            <!-- <img src="/crop_fertilizer_rainfall/crop_fertilizer_rainfall_app/css/rain_font.jpg" alt="Rainfall image"> -->
+                        </div>                        
+
+                        <div class="rain_des col-lg-6 col-md-6 col-sm-12">
+                            <h2>RainFall</h2>
+                            <p>Rainfall water that is condensed from the aqueous vapour in the atmosphere and falls in drops from
+                                the sky to the earth is called rain; and the total amount of rain that falls in a particular area
+                                 within a certain time is called rainfall.
+                            </p>
+
+                            <a class="rain_btn" href="/crop_fertilizer_rainfall_predict/rainfall_prediction">RainFall Prediction</a>
+                            <a class="rain_btn_1" href="#rainfall_description_id"> Read More</a>    
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <!-- Rainfall_section end here -->
+
+        <!-- Rainfall_description_section starts -->
+        <section id="rainfall_description_id">
+            <div class="rainfall_description_container">
+                <h1>RainFall</h1>
+                <hr>
+                <p>Rainfall water that is condensed from the aqueous vapour in the atmosphere and falls in drops 
+                    from the sky to the earth is called rain; and the total amount of rain that falls in a particular
+                     area within a certain time is called rainfall. The rainfall in Bangladesh varies, depending upon
+                      season and location. Winter (November through February) is very dry and accounts for only less 
+                      than 4% of the annual rainfall. Rainfall in this season varies from 20 mm in the west and south 
+                      to 40 mm in the northeast, which is caused by the westerly disturbances that enter the country 
+                      from the northwestern part of India. Rainfall in the pre-monsoon hot season (March-May) accounts
+                       for 10-25% of the total annual rainfall. The rain in this period is caused by convective storms
+                        (thunderstorms) or nor'westers (locally called Kalbaishakhi). 
+                    <a href="https://en.banglapedia.org/index.php/Rainfall"
+                     target="blank" style="font-size: 21px; text-decoration: none; color: red;">See More</a>
+                    
+                </p>
+            </div>        
+        </section>
+        <!-- Rainfall_description_section ends --> 
+
+        <!-- contact section starts -->
+        <section id="contact">
+            <div class="row">
+                <h2 class="contact-h2">Contact</h2>
+                <div class="col-lg-4">
+                    <div class="con_text">
+                        <div class="phone">
+                            <h3>Phone</h3>
+                            <p><i class="fas fa-phone-alt"></i> 01701234567</p>
+                            <p><i class="fas fa-phone-alt"></i> 01801234567</p>
+                            <p><i class="fas fa-tty"></i> 0234567</p>
+                        </div>
+                        <div class="email">
+                            <h3>Email</h3>
+                            <p><i class="fas fa-envelope"></i> crop_fertilizer_rainfall@gmail.com</p>
+                        </div>    
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact_details">
+<!--                        <h3 class="send_messages"> {{send_messages}} </h3>-->
+
+                        <form action="/crop_fertilizer_rainfall_predict/home/" method="POST">
+                        {% csrf_token %}
+                            <p><input type="text" name="name1" placeholder="Enter Your Name"></p><br>
+                            <p><input type="email" name="email1" placeholder="Enter Your Email"></p><br>
+                            <p>
+                                <textarea name="message1" id="" cols="30" rows="5" placeholder="Enter Your Text"></textarea>
+                            </p>
+                            <button type="submit">SEND</button>
+                            <button type="reset">RESET</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="contact-icon">
+                        <h2 class="stay_connect">Stay Connected</h2>
+                        <p class="stay_connect_text">Subscribe to our mailing list</p>
+                        <div class="row">
+                            <button class="btn" onclick="window.open('http://www.facebook.com/')" class="request-callback">
+                                <i class="fab fa-facebook-f" style="color: rgb(47, 115, 204);"></i>
+                            </button>
+                            <button class="btn" onclick="window.open('http://www.youtube.com/')" class="request-callback">
+                                <i class="fab fa-youtube" style="color: rgb(153, 39, 19);"></i>
+                            </button>
+                            <button class="btn" onclick="window.open('https://web.whatsapp.com/')" class="request-callback">
+                                <i class="fab fa-whatsapp" style="color: rgb(48, 190, 48);"></i>
+                            </button>
+                            <button class="btn" onclick="window.open('https://www.instagram.com/')" class="request-callback">
+                                <i class="fab fa-instagram" style="color: rgb(153, 39, 19);"></i>
+                            </button>
+                        </div>
+
+                        <div class="row">
+                            <button class="btn" onclick="window.open('https://www.skype.com/en/')" class="request-callback">
+                                <i class="fab fa-skype" style="color: rgb(58, 140, 187);" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn" onclick="window.open('https://www.linkedin.com/')" class="request-callback">
+                                <i class="fab fa-linkedin" style="color: rgb(73, 151, 196);" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn" onclick="window.open('https://gmail.com/')" class="request-callback">
+                                <i class="fas fa-envelope" style="color: rgb(17, 16, 16);" aria-hidden="true"></i>
+                            </button>
+                            <button class="btn" onclick="window.open('https://twitter.com/')" class="request-callback">
+                                <i class="fab fa-twitter" style="color: rgb(35, 123, 224);" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- contact section end -->
+
+        <!-- footer starts from here -->
+        <footer class="footer">
+            <div class="row">
+                <div class="footer_predict_system col-lg-5 col-md-12 col-sm-12">
+                    <!-- <h2>Crop <span>&</span> Rainfall <span>Predictor</span></h2> -->
+                    <h2>Crop <span>Fertilizer</span> Rainfall </h2>
+                </div>
+                <div class="col-lg-5 col-sm-12">
+                    <div class="footer-nav">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="/crop_fertilizer_rainfall_predict/about_us">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="fotter-text">
+                        <p>&copy; Developed with Love by <span style="color:rgb(231, 112, 112)">Partha Paul</span></p>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <button class="fotter-icon">
+                        <a href="#">
+                            <i class=" fas fa-arrow-up"></i>
+                        </a>
+                    </button>
+                </div>
+            </div>
+        </footer>
+        <!-- footer ends here -->
+    </div>
+</body>
+</html>
